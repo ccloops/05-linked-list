@@ -1,6 +1,5 @@
 'use strict';
 
-//vinicio - This is capital L because it's a class
 const LinkedList = require('../model/linked-list');
 
 describe('linked-list.js',() => {
