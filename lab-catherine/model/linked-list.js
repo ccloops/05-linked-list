@@ -23,9 +23,15 @@ class LinkedList{
     return this;
   }
 
-  //TODO : Homework
+  //DONE : Homework
   find(value){
-
+    console.log(value, this.value);
+    if(value === this.value)
+      return this;
+    if(this.next === null)
+      return null;
+    else
+      return this.next.find(value);
   }
 
   //vinicio - remove has( intentionally n_o), a bug. Can you find it?
@@ -44,5 +50,6 @@ class LinkedList{
     return this;
   }
 }
+
 
 module.exports = LinkedList;

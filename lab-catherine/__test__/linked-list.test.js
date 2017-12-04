@@ -21,6 +21,15 @@ describe('linked-list.js',() => {
     expect(result.next.next.next).toEqual(null);
   });
 
+  test('find should locate the next value and return it', () => {
+    let result = new LinkedList(5);
+    result.append(new LinkedList(10));
+    result.append(new LinkedList(20));
+    result.append(new LinkedList(30));
+    expect(result.find(10).value).toEqual(10);
+    expect(result.find(15)).toEqual(null);
+  });
+
   test('remove should update the next property and erase an element', () => {
     let first = new LinkedList(10);
     let second = new LinkedList(20);
